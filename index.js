@@ -14,10 +14,12 @@ app.post("/send-photo", async (req, res) => {
   }
 
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.ionos.fr", // ou smtp.1and1.fr selon ton adresse
+    port: 587,
+    secure: false, // true si port 465, false pour 587
     auth: {
-      user: process.env.EMAIL_USER,       // ton adresse mail
-      pass: process.env.EMAIL_PASS        // ton mot de passe d'app (pas ton mdp normal !)
+      user: process.env.EMAIL_USER, // ton e-mail IONOS complet
+      pass: process.env.EMAIL_PASS  // ton mot de passe normal (ou mot de passe app si activé)
     }
   });
 
