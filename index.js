@@ -15,8 +15,8 @@ app.post("/send-photo", async (req, res) => {
 
   const transporter = nodemailer.createTransport({
     host: "smtp.ionos.fr", // ou smtp.1and1.fr selon ton adresse
-    port: 587,
-    secure: false, // true si port 465, false pour 587
+    port: 465,
+    secure: true, // true si port 465, false pour 587
     auth: {
       user: process.env.EMAIL_USER, // ton e-mail IONOS complet
       pass: process.env.EMAIL_PASS  // ton mot de passe normal (ou mot de passe app si activé)
