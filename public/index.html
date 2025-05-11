@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur notre Photobooth !</h1>
+    <video id="video" autoplay></video>
+    <br>
+    <button id="capture">Prendre la photo</button>
+    <br>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <br>
+    <input type="email" id="email" placeholder="Entrez votre email" required>
+    <br><br>
+    <button id="send">Envoyer la photo par email</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
